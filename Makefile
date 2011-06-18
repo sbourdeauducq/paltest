@@ -1,6 +1,6 @@
 all: build/paltest.bit
 
-SRC=paltest.v
+SRC=paltest.v patgen.v
 
 build/paltest.ucf: paltest.ucf
 	cp paltest.ucf build/paltest.ucf
