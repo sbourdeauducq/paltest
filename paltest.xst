@@ -1,0 +1,8 @@
+run
+-ifn paltest.prj
+-top paltest
+-ifmt MIXED
+-opt_mode SPEED
+-opt_level 2
+-ofn paltest.ngc
+-p xc6slx45-fgg484-2

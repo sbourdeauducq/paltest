@@ -1,0 +1,47 @@
+# ==== Clock input ====
+NET "clk50" LOC = AB11 | IOSTANDARD = LVCMOS33;
+
+NET "clk50" TNM_NET = "GRPclk50";
+TIMESPEC "TSclk50" = PERIOD "GRPclk50" 20 ns HIGH 50%;
+
+# ==== LEDs ====
+NET "led1" LOC = B16 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+NET "led2" LOC = A16 | IOSTANDARD = LVCMOS33 | SLEW = QUIETIO | DRIVE = 24;
+
+# ==== VGA ====
+NET "vga_b(0)" LOC = D11;
+NET "vga_b(1)" LOC = C12;
+NET "vga_b(2)" LOC = B12;
+NET "vga_b(3)" LOC = A12;
+NET "vga_b(4)" LOC = C13;
+NET "vga_b(5)" LOC = A13;
+NET "vga_b(6)" LOC = D14;
+NET "vga_b(7)" LOC = C14;
+NET "vga_g(0)" LOC = C8;
+NET "vga_g(1)" LOC = C9;
+NET "vga_g(2)" LOC = A9;
+NET "vga_g(3)" LOC = D7;
+NET "vga_g(4)" LOC = D8;
+NET "vga_g(5)" LOC = D10;
+NET "vga_g(6)" LOC = C10;
+NET "vga_g(7)" LOC = B10;
+NET "vga_r(0)" LOC = C6;
+NET "vga_r(1)" LOC = B6;
+NET "vga_r(2)" LOC = A6;
+NET "vga_r(3)" LOC = C7;
+NET "vga_r(4)" LOC = A7;
+NET "vga_r(5)" LOC = B8;
+NET "vga_r(6)" LOC = A8;
+NET "vga_r(7)" LOC = D9;
+
+NET "vga_r(*)" IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "vga_g(*)" IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "vga_b(*)" IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+
+NET "vga_hsync_n" LOC = A14 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "vga_vsync_n" LOC = C15 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "vga_clk" LOC = A11 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "vga_psave_n" LOC = B14 | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+
+NET "vga_sda" LOC = A15 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;
+NET "vga_sdc" LOC = D15 | IOSTANDARD = LVCMOS33 | SLEW = SLOW;

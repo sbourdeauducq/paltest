@@ -1,0 +1,7 @@
+PAL CVBS test pattern on Milkymist One
+
+Build and load:
+make
+make load
+
+Connect a TV to the generated CVBS on the red VGA channel to display the pattern.
