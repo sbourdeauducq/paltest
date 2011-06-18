@@ -60,7 +60,7 @@ always @(posedge pclk) begin
 	end
 end
 
-assign sample_active = {1'b0, vcount[6:0]};
+assign sample_active = vcount[4] ^ hcount[5] ? 8'd100 : 8'd0;
 
 reg [4:0] state;
 reg [4:0] next_state;
