@@ -31,7 +31,7 @@ build/paltest.bit: build/paltest-routed.ncd
 build/paltest-routed.twr: build/paltest-routed.ncd
 	cd build && trce -e 100 paltest-routed.ncd paltest.pcf
 
-load:
+load: build/paltest.bit
 	jtag load.batch
 
 clean:
